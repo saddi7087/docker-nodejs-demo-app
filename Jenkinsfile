@@ -27,7 +27,7 @@ pipeline {
         stage('Deloy Image to ECR') {
             steps {
                sh """
-			      aws ecs update-service --cluster demo-app-demo --force-new-deployment --service demo-hw-service-demo
+			      aws ecs update-service --cluster demo-app-demo --force-new-deployment --service demo-hw-service-demo --region us-east-1
 			   """
             }
         }
